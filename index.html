@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Cost Negotiator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-handshake"></i> Event Cost Negotiator</h1>
+            <p>AI-powered cost estimation and negotiation</p>
+        </header>
+
+        <div class="main-content">
+            <div class="calculator-section">
+                <h2><i class="fas fa-calculator"></i> Cost Calculator</h2>
+                
+                <div class="service-selection">
+                    <h3>Select Services:</h3>
+                    <div class="service-options">
+                        <label class="service-option">
+                            <input type="checkbox" name="service" value="venue" data-price="5000">
+                            <span>Venue Rental ($ 5,000)</span>
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="service" value="catering" data-price="3000">
+                            <span>Catering ($ 3,000)</span>
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="service" value="decor" data-price="2000">
+                            <span>Decoration ($ 2,000)</span>
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="service" value="photography" data-price="1500">
+                            <span>Photography ($ 1,500)</span>
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="service" value="entertainment" data-price="2500">
+                            <span>Entertainment ($ 2,500)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="budget-input">
+                    <label for="client-budget">Your Budget ($):</label>
+                    <input type="number" id="client-budget" min="1000" value="100000">
+                </div>
+
+                <button id="calculate-btn" class="btn-primary">
+                    <i class="fas fa-calculator"></i> Calculate & Negotiate
+                </button>
+            </div>
+
+            <div class="results-section">
+                <h2><i class="fas fa-chart-line"></i> Results</h2>
+                <div id="estimation-results">
+                    <div class="empty-state">
+                        <i class="fas fa-comments-dollar"></i>
+                        <p>Select services and click calculate to see estimates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
